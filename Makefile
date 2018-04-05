@@ -20,5 +20,5 @@ run-command:
 run-producer: 
 	docker run -it --net kafkadocker_default --entrypoint bash ${IMAGE_REPO}/kafka ./bin/kafka-console-producer.sh --broker-list kafkadocker_kafka_1:9092 --topic messages
 
-run-comsummer: 
+run-consummer: 
 	docker run -it --net kafkadocker_default --entrypoint bash ${IMAGE_REPO}/kafka ./bin/kafka-console-consumer.sh --bootstrap-server kafkadocker_kafka_1:9092 --topic messages --from-beginning 
