@@ -1,0 +1,4 @@
+From test/kafka-base
+
+WORKDIR /opt/kafka
+CMD ["./bin/zookeeper-server-start.sh","config/zookeeper.properties"]

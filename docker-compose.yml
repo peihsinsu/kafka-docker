@@ -1,0 +1,13 @@
+version: '2'
+services:
+  zookeeper:
+    image: test/zookeeper
+    ports:
+      - "2181:2181"
+  kafka:
+    image: test/kafka
+    ports:
+      - "9092"
+    command: ["--override","zookeeper.connect=zookeeper:2181"]
+    depends_on: 
+      - "zookeeper"

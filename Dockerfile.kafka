@@ -1,0 +1,4 @@
+From test/kafka-base
+
+WORKDIR /opt/kafka
+ENTRYPOINT ["./bin/kafka-server-start.sh","config/server.properties"]
